@@ -1,7 +1,7 @@
-void tactile (int x, int y, int r) {
+void tactile (float x, float y, int r, color c1, color c2) {
  if (dist(x, y, mouseX, mouseY) < r) {
-  stroke(0); 
+  stroke(c2); 
  } else {
-  stroke(//color 
+  stroke(c1);
  }
 }

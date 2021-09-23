@@ -24,9 +24,10 @@ void intro() {
   text("#28", width/2, height*.35);
   
 
-  
+  println(frameRate);
   //Start Button
   stroke(0);
+  tactile(width/2, height*0.75, 50, black, red);
   strokeWeight(5);
   fill(0, 255, 255);
   circle(width/2, height*0.75, 100);

@@ -51,8 +51,6 @@ void game() {
   text(words[w], width/2, height/2);
 
   //Mechanical timer
-  fill(0);
-  text(timer/60, width*0.75, height*0.25);
   timer = timer+1;
   if (timer == 180) mode = 2;
 
@@ -65,6 +63,9 @@ void game() {
   noStroke();
   fill(timer+75, 0, 0);
   circle(600, 600, 150);
+  fill(0);
+  textAlign(CENTER, CENTER);
+  text(timer/60, 600, 594);
   
   //Highscore
   if (points > highscore) {

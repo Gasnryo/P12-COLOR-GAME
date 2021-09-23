@@ -7,6 +7,8 @@ Grayson Lilly
  
  Does Mr Pelletier get offended if i watch his video in 2x speed to get through it
  faster? So many questions! What if I use adblock?
+ 
+ NOTE FROM THURSDAY EVENING: I am definitely remembering how to do this better than I was when I wrote the above note. Yay!
  */
 
 //Game Arrays
@@ -20,6 +22,8 @@ color green = #0EFF03;
 color yellow = #FFE603;
 color magenta = #FF03E6;
 color white = #FFFFFF;
+
+color black = #000000;
 
 int r;
 int g;
@@ -42,6 +46,8 @@ int points;
 int highscore = 0;
 int timer;
 int match;
+
+int rotate;
 
 //temp var
 int matchpoints;
@@ -81,6 +87,7 @@ void setup() {
   points = 0;
       //highscore
   timer = 0;
+  rotate = 0;
   
   //Font setup
   School = createFont("School.otf", 200);
