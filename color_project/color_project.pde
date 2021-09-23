@@ -21,12 +21,21 @@ color yellow = #FFE603;
 color magenta = #FF03E6;
 color white = #FFFFFF;
 
+int r;
+int g;
+int b;
+
 //random color/word
 int w;
 int c;
 
 //Font(s)
 PFont School;
+
+//Gif(s)
+PImage[] gif;
+int numberOfFrames;
+int f;
 
 //Variables
 int points;
@@ -76,6 +85,16 @@ void setup() {
   //Font setup
   School = createFont("School.otf", 200);
   
+  //gif setup
+  numberOfFrames = 12;
+  gif = new PImage[numberOfFrames];
+  
+  int i = 0;
+  
+  while (i < numberOfFrames) {
+    gif[i] = loadImage("frame_" +i+ "_delay-0.1s.gif");
+    i++;
+  }
 
   size(800, 800);
   mode = 0;

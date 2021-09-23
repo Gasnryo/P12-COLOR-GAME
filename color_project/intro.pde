@@ -1,18 +1,29 @@
 void intro() {
   
-  background(0,100,100);
+  //background(0,100,100);
+  image(gif[f], 0, 0, width, height);
+  
+  if (frameCount % 3 == 0) f = f+1;
+  if (f == numberOfFrames) f = 0;
   
   //Intro text
   textFont(School);
   textAlign(CENTER, CENTER);
-  textSize(100);
-  fill(0);
-  text("GENERIC", width/2, height*.20);
-  text("COLOR GAME", width/2, height*.35);
-  text("#28", width/2, height*.5);
+  textSize(75);
   
-  textSize(25);
-  text("UNDER CONSTRUCTION ~~ GIF NEEDED", width/2, height*.9);
+  //Random Colors
+  fill(r, g, b);
+  if (frameCount % 3 == 0) {
+  r = int(random(40, 235));
+  g = int(random(40, 235));
+  b = int(random(40, 235));
+  }
+  
+  text("GENERIC", width/2, height*.05);
+  text("COLOR GAME", width/2, height*.2);
+  text("#28", width/2, height*.35);
+  
+
   
   //Start Button
   stroke(0);
